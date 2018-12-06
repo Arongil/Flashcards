@@ -1,0 +1,46 @@
+* {
+    font-family: Helvetica, Verdana, Arial;
+    background-color: rgb(200, 200, 200);
+}
+
+.center {
+    display: block;
+    margin: auto;
+    text-align: center;
+    list-style-position: inside;
+}
+
+.not-center {
+    display: block;
+    margin: auto;
+    text-align: left;
+    list-style-position: inside;
+}
+
+#instructions {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+#file {
+    background-color: rgb(220, 220, 220);
+}
+
+#flashcard {
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    width: 40%;
+    height: 40%;
+    background-color: rgb(250, 250, 250);
+}
+
+#front-content {
+    background-color: rgb(250, 250, 250);
+}
+#back-content {
+    background-color: rgb(250, 250, 250);
+}

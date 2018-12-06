@@ -2,8 +2,25 @@
 <html>
 <head>
     <title>Flashcards</title> 
+    <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <h2>Server running!</h2>
+    <h2 class="center">Flashcard Frenzy</h2><br>
+    <div id="instructions" class="center">
+        <ol id="instructions" class="not-center">
+            <li>Load a flashcards file.</li>
+            <li>Left click to flip.</li>
+            <li>Right click for next.</li>
+        </ol>
+    </div><br>
+    <input type="file" id="file" class="center" accept="text/plain" onchange="readFile(event.target.files[0]);"></input><br>
+    <button id="next" class="center" onclick="flashcards.randomizeFlashcard();">Next Flashcard</button><br>
+    <div id="flashcard" class="center" oncontextmenu="flashcards.randomizeFlashcard(); return false;">
+        <p id="front-content" style="font-size: 2.2em"></p>
+        <p id="back-content" style="font-size: 1.6em"></p>
+    </div>
+    <script src="Flashcard.js"></script>
+    <script src="FlashcardSet.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
