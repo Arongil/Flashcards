@@ -8,12 +8,16 @@
     <h2 class="center">Flashcard Frenzy</h2><br>
     <div id="instructions" class="center">
         <ol id="instructions" class="not-center">
-            <li>Load a flashcards file.</li>
+            <li>Load a flashcards file or use a preset.</li>
             <li>Left click to flip.</li>
             <li>Right click for next.</li>
         </ol>
     </div><br>
-    <input type="file" id="file" class="center" accept="text/plain" onchange="readFile(event.target.files[0]);"></input><br>
+    <div id="sets" class="center">
+        <input type="file" id="file" class="center" accept="text/plain" onchange="readFile(event.target.files[0]);"></input>
+        <button onclick="readPath('flashcardSets/EnglishVocabulary');">English Vocabulary</button>
+        <button onclick="readPath('flashcardSets/SpanishVocabulary');">Spanish Vocabulary</button>
+    </div><br>
     <ul id="navigation" class="center">
         <li><button id="next" class="center" onclick="flashcards.previousFlashcard(1);">Previous Flashcard</button></li>
         <li><button id="next" class="center" onclick="flashcards.nextFlashcard(1);">Next Flashcard</button></li>

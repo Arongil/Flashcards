@@ -22,6 +22,10 @@
     margin-right: 20%;
 }
 
+#sets button {
+    margin-left: 1%;
+    margin-right: 1%;
+}
 #file {
     background-color: rgb(220, 220, 220);
 }
