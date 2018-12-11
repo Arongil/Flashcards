@@ -11,12 +11,24 @@ class FlashcardSet {
                 split[1].trim()
             ));
         }
-        this.currentFlashcard;
+        this.currentFlashcard = 0;
     }
 
-    randomizeFlashcard() {
-        this.currentFlashcard = this.flashcards[Math.floor( Math.random() * this.flashcards.length )];
-        this.currentFlashcard.init();
+    nextFlashcard(number = 1) {
+        for (var i = 0; i < number; i++) {
+            this.currentFlashcard = (this.currentFlashcard + 1) % this.flashcards.length; 
+            this.flashcards[this.currentFlashcard].init();
+        }
+    }
+
+    previousFlashcard(number = 1) {
+        for (var i = 0; i < number; i++) {
+            this.currentFlashcard = this.currentFlashcard - 1;
+            if (this.currentFlashcard < 0) {
+                this.currentFlashcard = this.flashcards.length - 1;
+            }
+            this.flashcards[this.currentFlashcard].init();
+        }
     }
 
 }

@@ -5,7 +5,7 @@ function readFile(file) {
     reader.onload = function() {
         text = reader.result; 
         flashcards = new FlashcardSet(text);
-        flashcards.randomizeFlashcard();
+        flashcards.nextFlashcard(1);
     }
     reader.readAsText(file);
 }
@@ -14,5 +14,5 @@ document.getElementById("flashcard").onclick = function(e) {
     if (flashcards === undefined) {
         return;
     }
-    flashcards.currentFlashcard.flip();
+    flashcards.flashcards[flashcards.currentFlashcard].flip();
 }

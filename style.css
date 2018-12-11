@@ -26,6 +26,18 @@
     background-color: rgb(220, 220, 220);
 }
 
+#navigation {
+    padding: 0%;
+    width: 60%;
+}
+#navigation li {
+    float: left;
+    list-style: none;
+    text-align: center;
+    margin: 0.8%;
+    width: 23.4%;
+}
+
 #flashcard {
     margin-left: 20%;
     margin-right: 20%;

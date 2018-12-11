@@ -14,8 +14,13 @@
         </ol>
     </div><br>
     <input type="file" id="file" class="center" accept="text/plain" onchange="readFile(event.target.files[0]);"></input><br>
-    <button id="next" class="center" onclick="flashcards.randomizeFlashcard();">Next Flashcard</button><br>
-    <div id="flashcard" class="center" oncontextmenu="flashcards.randomizeFlashcard(); return false;">
+    <ul id="navigation" class="center">
+        <li><button id="next" class="center" onclick="flashcards.previousFlashcard(1);">Previous Flashcard</button></li>
+        <li><button id="next" class="center" onclick="flashcards.nextFlashcard(1);">Next Flashcard</button></li>
+        <li><button id="next" class="center" onclick="flashcards.nextFlashcard(10);">10 Forward</button></li>
+        <li><button id="next" class="center" onclick="flashcards.nextFlashcard(100);">100 Forward</button></li>
+    </ul><br><br>
+    <div id="flashcard" class="center" oncontextmenu="flashcards.nextFlashcard(1); return false;">
         <p id="front-content" style="font-size: 2.2em"></p>
         <p id="back-content" style="font-size: 1.6em"></p>
     </div>
