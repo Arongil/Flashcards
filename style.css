@@ -17,6 +17,10 @@
     list-style-position: inside;
 }
 
+a:hover {
+    text-decoration: none;
+}
+
 #instructions {
     margin-left: 20%;
     margin-right: 20%;
